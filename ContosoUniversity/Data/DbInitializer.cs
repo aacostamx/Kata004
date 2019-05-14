@@ -248,6 +248,22 @@ namespace ContosoUniversity.Data
                 }
             }
             context.SaveChanges();
+
+            #region ExamInitializer
+            var exams = new Exam[]
+            {
+                new Exam { Title = "Diagnostic Testing", Date = new DateTime(2019, 5, 15, 15, 30, 0) },
+                new Exam { Title = "Formative Assessments", Date = new DateTime(2019, 5, 16, 10, 0, 0) },
+                new Exam { Title = "Benchmark Testing", Date = new DateTime(2019, 5, 17, 9, 30, 0) },
+                new Exam { Title = "Summative Assessments", Date = new DateTime(2019, 5, 20, 15, 0, 0) }
+            };
+
+            foreach (Exam e in exams)
+            {
+                context.Exams.Add(e);
+            }
+            context.SaveChanges();
+            #endregion
         }
     }
 }

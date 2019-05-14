@@ -32,6 +32,7 @@ namespace ContosoUniversity.Infrastructure.Tags
 
             Editors.BuilderPolicy<InstructorSelectElementBuilder>();
             Editors.BuilderPolicy<DepartmentSelectElementBuilder>();
+            //Editors.BuilderPolicy<ExamSelectElementBuilder>();
             DisplayLabels.Always.BuildBy<DefaultDisplayLabelBuilder>();
             DisplayLabels.ModifyForAttribute<DisplayAttribute>((t, a) => t.Text(a.Name));
             Displays.IfPropertyIs<DateTime>().ModifyWith(m => m.CurrentTag.Text(m.Value<DateTime>().ToShortDateString()));
