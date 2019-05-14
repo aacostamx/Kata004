@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs/ContosoUniversity/config
+/.vs/ContosoUniversity
+/ContosoUniversity/bin/Debug/netcoreapp2.1
+/ContosoUniversity/obj
+/ContosoUniversity/Properties
+/ContosoUniversity
+/ContosoUniversity.IntegrationTests
