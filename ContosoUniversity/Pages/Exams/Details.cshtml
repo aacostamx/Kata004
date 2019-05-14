@@ -1,11 +1,11 @@
-﻿@page
-@model Exams.Create
+﻿@page "{id:int}"
+@model Exams.Edit
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<h2>Create</h2>
+<h2>Edit</h2>
 
 <h4>Exam</h4>
 <hr />
@@ -13,11 +13,18 @@
     <div class="col-md-4">
         <form method="post">
             @Html.ValidationDiv()
-            @*@Html.FormBlock(m => m.Data.Id)*@
+            <input-tag for="Data.Id" />
+
+            <div class="form-group">
+                <label-tag for="Data.Id" />
+                <div><display-tag for="Data.Id" /></div>
+            </div>
+
             @Html.FormBlock(m => m.Data.Title)
             @Html.FormBlock(m => m.Data.Date)
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
     </div>

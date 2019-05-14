@@ -53,7 +53,7 @@ namespace ContosoUniversity.Pages.Exams
             [DataType(DataType.Date)]
             [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
             [Display(Name = "Exam Date")]
-            public DateTime Date { get; set; }
+            public DateTime? Date { get; set; }
         }
 
         public class CommandHandler : IRequestHandler<Command, int>
